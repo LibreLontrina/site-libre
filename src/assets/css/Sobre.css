@@ -1,0 +1,116 @@
+.Sobre {
+    margin-top: 2%;
+    justify-content: center;             /* Centraliza horizontalmente */
+    align-items: flex-start;             /* Alinha no topo verticalmente */
+    gap: 50px;                            /* Espaço entre as duas colunas */
+    margin-top: 100px;                   /* Distância do topo da tela */
+  }
+
+/* Seção 1: Topo com ícone e "Sobre" */
+.sobreTopo {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .boxSobreIcon {
+    width: 300px;
+    height: 300px;
+    background-color: #bfbfbf;
+    box-shadow: 0 4px 6px rgba(56, 1, 1, 0.1);
+    display: flex;
+    align-content: right;
+    justify-content: center;
+  }
+  
+  .boxSobreTexto {
+    max-width: 600px;
+    align-items: center;
+    max-width: 600px;
+  }
+  
+  .boxSobreTexto h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-left: 5%;
+  }
+  
+  .boxSobreTexto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Seção 2: Propósito */
+  .sobreSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .textoSobre {
+    max-width: 600px;
+    align-items: center;
+  }
+  
+  .textoSobre h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .textoSobre p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Caixa sobreposta */
+  .boxSobreContainer {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .boxSobreFundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .boxMenor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #bfbfbf;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(56, 1, 1, 0.1);
+  }
+  
+  /* Seção 3: Conteúdo extra */
+  .conteudoExtra {
+    padding: 80px 100px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .conteudoExtra h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .conteudoExtra p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  

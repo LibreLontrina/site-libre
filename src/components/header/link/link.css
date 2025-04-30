@@ -1,0 +1,14 @@
+/*ESTILIZAÇÃO DOS LINKS DO HEADER: SOBRE E DESCUBRA POR ENQUANTO*/
+.link {
+    font-family: "kanit", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex: 0 1 auto;
+    transition: color 0.3s ease;
+  }
+
+  .link:hover {
+    color:aliceblue
+  }
+  
