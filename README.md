@@ -1,12 +1,20 @@
-# React + Vite
+# Repositório de desenvolvimento do site Libre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Bem-vindo ao repositório do site Libre!
 
-Currently, two official plugins are available:
+<strong>Lembre-se de criar uma branch sua para fazer commits! <br>
+(Nomear sua branch com aquilo que você estiver fazendo, por exemplo, alterou um botão?
+<br> nomeie a branch de button-home)</strong>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Regras:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<ul>
+<li>Criar pastas novas seguindo a mesma formatação e organização (ex: caso for criar uma <br>
+página nova, criar na pasta pages. Novo componente? Pasta components)</li>
+<li>Não trocar pastas de lugar</li>
+<li>Nomear os arquivos .jsx como index.jsx dentro das pastas das quais eles pertencem <br>
+(ex: Se for criar uma página sobre, por exemplo, precisará fazer uma pasta <br>
+chamada sobre, e dentro dela criar um arquivo index.jsx, ao invés de sobre.jsx)</li>
+<li>Separar os estilos por pastas também (ao invés de termos uma pasta css, <br>
+colocaremos os estilos dentro das pastas de cada página ou componente)</li>
+</ul>

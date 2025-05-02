@@ -1,6 +1,6 @@
-import React, {useState, useEffect, useRef} from "react";
-import "../assets/css/style.css";
-import loupe from "/img/loupe.png";
+import React, { useState, useEffect, useRef } from "react";
+import "../header/header.css";
+import loupe from "../../assets/img/loupe.png";
 
 const Header = () => {
   const [showOptions, setShowOptions] = useState(false);
