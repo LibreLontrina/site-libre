@@ -7,12 +7,14 @@
   font-size: 18px;
   font-weight: 400;
 }
+
 .fonte2 {
   /*logo*/
   font-family: "kalnia", serif;
   font-size: 300%;
   font-weight: 700;
 }
+
 .fonte3 {
   /*footer*/
   font-family: "kalnia", serif;
@@ -25,6 +27,7 @@ a {
   color: black;
   text-decoration: none;
 }
+
 ul {
   list-style: none;
   padding: 0;
@@ -66,6 +69,7 @@ header {
 
   padding: 0px 30px;
 }
+
 .logo {
   flex: 0;
   background-color: rgb(241, 241, 241);
@@ -73,6 +77,7 @@ header {
   height: 60px;
   width: 156.5px;
 }
+
 .outros {
   display: flex;
   flex: 0;
@@ -90,14 +95,17 @@ header {
 
   padding: 5px 15px 5px 15px;
 }
+
 .outroslayout {
   display: flex;
   flex: 0 1 auto;
 }
+
 .outroslayout:hover {
   color: white;
   transition: 0.2s;
 }
+
 .conta {
   display: flex;
   flex: 0 1 auto;
@@ -126,6 +134,7 @@ header {
   box-sizing: border-box;
   transition: 0.5s;
 }
+
 .navbar form {
   display: flex;
 }
@@ -135,14 +144,17 @@ header {
   transition: 0.5s;
   width: 700px;
 }
+
 .navbar.fixed .barra {
   width: 700px;
   transition: 0.5s;
 }
+
 .navbar.fixed .barra:focus {
   transform: translateY(105px);
   transition: 0.5s;
 }
+
 .barra {
   flex-shrink: 0;
   height: 40px;
@@ -165,6 +177,7 @@ header {
 
   box-shadow: 0px 2px 5px rgb(121, 121, 121);
 }
+
 .barra:focus {
   background-color: rgb(236, 236, 236);
   border-style: none;
@@ -172,6 +185,7 @@ header {
 
   box-shadow: 0px 2px 5px rgb(121, 121, 121);
 }
+
 .btnPesq {
   border: none;
 
@@ -196,13 +210,16 @@ header {
 
   transition: 0.5s;
 }
+
 .btnPesq:hover {
   background-color: rgb(236, 236, 236);
   transition: 0.5s;
 }
+
 .btnPesq img {
   width: 22px;
 }
+
 .opcoes {
   position: absolute;
   z-index: 1;
@@ -226,12 +243,14 @@ header {
 
   background-color: white;
 }
+
 .opcoes.visible {
   display: grid;
 
   opacity: 1;
   visibility: visible;
 }
+
 .barralateral {
   /*background-color: rgb(54, 137, 221);*/
   box-sizing: border-box;
@@ -243,14 +262,17 @@ header {
 
   border-right: 1px solid rgb(80, 80, 80);
 }
+
 .listgen {
   list-style: none;
   padding: 0px 5px;
   margin-right: 10px;
 }
+
 .listgen li {
   margin: 15px 0px;
 }
+
 .listgen li span {
   font-family: "Kanit", sans-serif;
   font-weight: 300;
@@ -261,13 +283,16 @@ header {
   list-style: none;
   padding: 0px 10px 0px 10px;
 }
+
 .listpes span {
   font-family: "Kanit";
   font-weight: 300;
 }
+
 .listpes li {
   padding: 10px 0px 10px 0px;
 }
+
 .listpes li:hover {
   background-color: rgb(236, 236, 236);
 }
@@ -276,6 +301,7 @@ header {
   grid: pesquisa;
   box-sizing: border-box;
 }
+
 .itensopc {
   font-size: 18px;
   margin-bottom: 5px;
@@ -298,15 +324,18 @@ header {
 
   z-index: 100;
 }
+
 .preperfil.visivel {
   display: flex;
 }
+
 .backperf {
   position: relative;
   background-color: rgb(134, 134, 134);
   width: 100%;
   height: 100px;
 }
+
 .fotoperf {
   display: flex;
   position: absolute;
@@ -319,6 +348,7 @@ header {
   border-radius: 70px;
   background-color: rgb(114, 114, 114);
 }
+
 .linksperf {
   display: flex;
   flex-direction: column;
@@ -335,6 +365,7 @@ header {
 
   justify-content: space-between;
 }
+
 .linksperf span {
   font-family: "kanit", sans-serif;
   font-size: 18px;
@@ -349,6 +380,7 @@ body {
   min-height: 100vh;
   background-color: #f4f4f4;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -385,6 +417,7 @@ main {
   height: 250px;
   padding: 40px 50px;
 }
+
 #titulofooter {
   color: white;
 }
@@ -397,6 +430,7 @@ main {
 
   gap: 15px;
 }
+
 .links {
   display: flex;
   width: 600px;
@@ -405,6 +439,7 @@ main {
 
   gap: 10px;
 }
+
 .sectfoot {
   display: flex;
   flex-direction: column;
@@ -419,18 +454,22 @@ main {
   font-weight: 300;
   color: white;
 }
+
 .sectfoot ul {
   list-style: none;
   padding: 0;
 
   margin-top: 10px;
 }
+
 .sectfoot a {
   color: white;
 }
+
 .sectfoot a:hover {
   text-decoration: underline;
 }
+
 .sectfoot span {
   font-weight: 400;
   font-size: 20px;
@@ -445,15 +484,18 @@ main {
 
   padding-top: 30px;
 }
+
 .redessociais img {
   width: 40px;
 }
+
 .redessociais span {
   font-family: "Kanit";
   color: white;
   font-weight: 400;
   font-size: 20px;
 }
+
 .linksRedSoc {
   display: flex;
   margin-top: 10px;
@@ -466,15 +508,18 @@ main {
 
   padding: 30px 20px 0px 0px;
 }
+
 .instalar img {
   height: 45px;
 }
+
 .instalar span {
   font-family: "Kanit";
   color: white;
   font-weight: 400;
   font-size: 20px;
 }
+
 .linksInst {
   margin-top: 10px;
   display: flex;
