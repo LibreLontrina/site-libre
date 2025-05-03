@@ -10,8 +10,8 @@ import appStore from "../../assets/img/ApStore.svg";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer">
+    <>
+      <footer>
         <label className="fonte2" id="titulofooter">LIBRE</label>
 
         <div className="footer1">
@@ -60,8 +60,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 
