@@ -16,26 +16,21 @@ const links = [
     link: "/",
     text: "Home"
   },
-  /*
-  {
-    link: "/catalogo",
-    text: "Catálogo"
-  },
-  { 
-    link: "/livros",
-    text: "Livros"
-  },
-  */
+  
   {
     link: "/sobre",
     text: "Sobre"
   },
-  /*
+  
   {
     link: "/login", 
     text: "Login"
   },
-  */
+    
+    {
+      link: "/descubra",
+      text: "Descubra"
+    }
 ];  
 
 // componente Header

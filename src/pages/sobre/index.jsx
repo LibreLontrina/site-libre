@@ -33,6 +33,7 @@ export default function Sobre() {
           description="Esta seção pode ser usada para descrever os valores, missão ou visão do projeto Libre. Você também pode adicionar imagens, ícones ou links aqui para enriquecer a experiência do usuário."
         />
       </div>
+ 
     );
 }
 

@@ -1,4 +1,14 @@
+import livros from "../livros"
+import { Links } from "react-router-dom";
+import LinkHome from "./link/LinkHome";
 const home = () => {
+
+    const links = [
+        {
+            link: "/livros",
+            text: "livros"
+        }
+    ];
     return (
         <main>
         <div className="Home">
@@ -17,7 +27,7 @@ const home = () => {
                 <p>coloque um comentário e brilhe!</p>
                 <br />
                 <p>
-                Conheça os nossos livros: (pag catalogo)
+                Conheça os nossos:  <LinkHome link="/livros" text="Livros" /> 
                 </p>
             </div>
             <br />

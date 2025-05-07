@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee1fa;
+    padding: 10px 16px;
+    border-bottom: 2px solid #d4b9f9;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .carousel-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4b0082;
+  }
+  
+  .carousel-header a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #6a0dad;
+    font-weight: 500;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 10px 20px;
+  }
+  
+  .card {
+    min-width: 150px;
+    max-width: 150px;
+    height: 240px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #444;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f0f0f0;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 5px 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .arrow:hover {
+    background-color: #e0d4f7;
+  }
+  
+  .arrow.left {
+    left: 10px;
+  }
+  
+  .arrow.right {
+    right: 10px;
+  }
+  
+  .carousel-container {
+    margin-bottom: 30px;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    gap: 16px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 10px;
+    min-width: 150px;
+    max-width: 150px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .livro-capa {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .livro-titulo {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .livro-avaliacao {
+    font-size: 13px;
+    color: #ffc107; /* cor estrela */
+  }
+  
+/*
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  .carousel-header h2 {
+    font-size: 20px;
+  }
+
+  .carousel-header a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 10px 0;
+  }
+
+  .card {
+    min-width: 150px;
+    height: 200px;
+    background: #d3d3d3;
+    flex-shrink: 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
+  .arrow.left {
+    left: 0;
+  }
+
+  .arrow.right {
+    right: 0;
+  } */
