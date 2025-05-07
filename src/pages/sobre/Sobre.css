@@ -7,13 +7,11 @@
   }
 
 /* Seção 1: Topo com ícone e "Sobre" */
-.sobreTopo {
+.card-sobre {
+    color: black;
     display: flex;
-    align-items: center;
-    padding: 100px;
-    gap: 60px;
-    flex-wrap: wrap;
   }
+
   
   .boxSobreIcon {
     width: 300px;

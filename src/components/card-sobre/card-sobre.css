@@ -1,0 +1,131 @@
+.card-sobre {
+    margin-top: 2%;                 
+    justify-content: center;        
+    align-items: flex-start;        
+    gap: 50px;                      
+}
+
+.backgroundIcon-frente {
+    background-color: #686565;      
+    padding: 80px 100px;            
+}
+
+.sobreTopo {
+    display: flex;                  
+    align-items: center;            
+    padding: 100px;                 
+    gap: 60px;                      
+    flex-wrap: wrap;                
+}
+
+/* Caixa que contém o ícone */
+.boxSobreIcon {
+    width: 300px;                 
+    height: 300px;                  
+    background-color: #bfbfbf;      
+    box-shadow: 0 4px 6px rgba(56, 1, 1, 0.1); 
+    display: flex;                  
+    align-content: right;           
+    justify-content: center;      
+}
+
+/* Caixa que contém o texto */
+.boxSobreTexto {
+    max-width: 600px;              
+    align-items: center;            
+}
+
+
+.boxSobreTexto h1 {
+    font-size: 2rem;                
+    margin-bottom: 20px;          
+    margin-left: 5%;                
+}
+
+.boxSobreTexto p {
+    font-size: 1.1rem;            
+    line-height: 1.6;               
+}
+
+.sobreSection {
+    display: flex;                  
+    justify-content: space-between; 
+    align-items: center;     
+    padding: 100px;        
+    gap: 60px;     
+    flex-wrap: wrap;  
+}
+
+/* Caixa de texto na seção de propósito */
+.textoSobre {
+    max-width: 600px;               /* Largura máxima de 600px */
+    align-items: center;            /* Alinha os itens ao centro verticalmente (pode não ter efeito esperado sem display flex) */
+}
+
+/* Estiliza o título dentro da caixa de texto */
+.textoSobre h1 {
+    font-size: 2rem;                /* Tamanho da fonte de 2rem */
+    margin-bottom: 20px;            /* Margem inferior de 20px */
+}
+
+/* Estiliza o parágrafo dentro da caixa de texto */
+.textoSobre p {
+    font-size: 1.1rem;              /* Tamanho da fonte de 1.1rem */
+    line-height: 1.6;               /* Altura da linha de 1.6 */
+}
+
+/* Caixa sobreposta */
+.boxSobreContainer {
+    position: relative;             /* Define a posição como relativa para posicionamento absoluto interno */
+    width: 400px;                   /* Largura de 400px */
+    height: 400px;                  /* Altura de 400px */
+}
+
+/* Fundo da caixa sobreposta */
+.boxSobreFundo {
+    position: absolute;             /* Posicionamento absoluto dentro do contêiner relativo */
+    width: 100%;                    /* Largura total do contêiner */
+    height: 100%;                   /* Altura total do contêiner */
+    background-color: #d9d9d9;      /* Cor de fundo cinza claro */
+    top: 0;                         /* Alinha ao topo do contêiner */
+    left: 0;                        /* Alinha à esquerda do contêiner */
+    z-index: 1;                     /* Define a ordem de empilhamento */
+}
+
+/* Caixa menor sobreposta ao fundo */
+.boxMenor {
+    position: absolute;             /* Posicionamento absoluto dentro do contêiner relativo */
+    width: 100%;                    /* Largura total do contêiner */
+    height: 100%;                   /* Altura total do contêiner */
+    background-color: #bfbfbf;      /* Cor de fundo cinza */
+    top: 30px;                      /* Deslocamento de 30px do topo */
+    left: 30px;                     /* Deslocamento de 30px da esquerda */
+    z-index: 2;                     /* Define a ordem de empilhamento acima do fundo */
+    box-shadow: 0 4px 6px rgba(56, 1, 1, 0.1); /* Sombra suave */
+}
+
+/* Seção 3: Conteúdo extra */
+.conteudoExtra {
+    padding: 80px 100px;            /* Espaçamento interno: 80px vertical, 100px horizontal */
+    background-color: #f9f9f9;      /* Cor de fundo quase branca */
+    text-align: center;             /* Centraliza o texto */
+}
+
+/* Estiliza o subtítulo na seção de conteúdo extra */
+.conteudoExtra h2 {
+    font-size: 1.8rem;              /* Tamanho da fonte de 1.8rem */
+    margin-bottom: 20px;            /* Margem inferior de 20px */
+}
+
+/* Estiliza o parágrafo na seção de conteúdo extra */
+.conteudoExtra p {
+    font-size: 1.1rem;              /* Tamanho da fonte de 1.1rem */
+    max-width: 800px;               /* Largura máxima de 800px */
+    margin: 0 auto;                 /* Centraliza horizontalmente */
+    line-height: 1.6;               /* Altura da linha de 1.6 */
+}
+
+.invertido {
+    flex-direction: row-reverse;
+  }
+  
