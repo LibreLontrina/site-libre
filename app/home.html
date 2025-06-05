@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <style>
+        .nome, .email{
+            color: rgb(53, 53, 216);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ESSE É O HOME!</h1>
+        <div class="links">
+            <a href="perfil.html" data-login="true">perfil</a>
+            <a href="#">suporte</a>
+            <a href="#">livros</a>
+        </div>
+    </header>
+    <main>
+    <!--Simplificação de foto de perfil e outros dados-->
+    <h3><label id="nome" class="nome">...</label></h3> 
+    <h3><label id="email" class="email">...</label></h3>
+    <button id="logout">sair da conta</button>
+    </main>
+    
+
+    <script src="js/verifToken.js"></script>
+</body>
+</html>

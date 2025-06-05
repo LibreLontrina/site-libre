@@ -1,0 +1,99 @@
+main{
+    padding: 0 !important;
+
+}
+
+.background{
+    background-color: lightblue;
+
+    width: 100%;
+    height: 200px;
+}
+.fotoPerfil{
+    background-color: rgb(55, 69, 73);
+    width: 120px;
+    height: 120px;
+
+    z-index: 10;
+
+    border-radius: 120px;
+
+    position: absolute;
+
+    transform: translate(100px, 120px);
+
+}
+.fotoPerfil img{
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+}
+.fotoPerfil img:hover{
+    background-color: rgb(58, 27, 27);
+    opacity: 0.5;
+}
+
+.perfil{
+    height: 900px;
+    box-shadow: 0px -12px 23px 0px rgba(0,0,0,0.1);
+
+    padding: 45px 120px;
+}
+.formDesc{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    justify-self: center;
+}
+    .formDesc button{
+        padding: 0px;
+        margin: 0px;
+        width: 150px;
+        height: 23px;
+        
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        border: 1px solid rgba(90, 90, 90, 0.493);
+        border-radius: 10px;
+
+    }
+.descricao{ /*INPUT DA DESCRIÇÃO*/
+    resize: none;
+    width: 500px;
+    height: 100px;
+
+    font-size: 18px;
+    padding: 7px;
+
+    background-color: transparent;
+    border: 1px solid rgba(90, 90, 90, 0.493);
+    border-radius: 10px;
+}
+.abled{
+    background-color: rgb(230, 230, 230);
+}
+
+img{
+    z-index: 0;
+}
+
+.preVisuFoto{
+    background-color: rgb(212, 240, 212);
+    border: 1px solid black;
+
+    width: 300px;
+    height: 50px;
+
+    position: absolute;
+    transform: translate(230px, 120px);
+
+    display: none;
+}
+    
+.visible{
+    display: block;
+}
+

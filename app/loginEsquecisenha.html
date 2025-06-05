@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ESQUECI SENHA</h2>
+    <form method="post" data-endpoint="comum/esqueciSenha" data-method="POST">
+        <p>
+            <label for="email">Coloque o email da sua conta</label>
+            <input type="email" name="email" id="email">
+        </p>
+
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+
+    <h3>Código enviado para o email</h2>
+    <form method="post" data-endpoint="comum/verifEsqueciSenha" data-method="POST" data-redirect="loginNovasenha.html">
+        <p>
+            <label for="codEsqSen">Coloque o código enviado para seu email</label>
+            <input type="text" maxlength="6" name="codEsqSen">
+        </p>
+
+        <p>
+            <button type="submit">Confirmar</button>
+        </p>
+
+    </form>
+
+
+    <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <header>
+        <h1>ESSE É O PERFIL!</h1>
+        <div class="links">
+            <a href="perfil.html">perfil</a>
+            <a href="#">suporte</a>
+            <a href="">livros</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="background">
+
+            <div class="fotoPerfil" id="fotoPerfil">
+                <img src="samoeida.png" alt="" id="img">    
+            </div>
+
+            <div class="preVisuFoto" id="preVisuFoto">
+                <form method="POST" data-method="POST" data-endpoint="usuario/PerfilAddFoto" id="form_addfoto">
+                    <input type="file">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="perfil">
+            <form method="POST" class="formDesc" id="formPefil">
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" class="descricao" disabled></textarea>
+                <button id="editar" type="button">confirmar mudanças?<span>✏️</span></button>
+            </form>
+        </div>
+    </main>
+
+
+
+
+
+    <script src="js/perfil.js"></script>
+    <script src="js/verifToken.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h2>FORMULARIO DE CADASTRO (CADASTRO USER)</h2>
+    <form method="POST" data-method="POST" data-endpoint="usuario/cadastrar " data-redirect="verifCadastro.html"
+     id="form_cadastro" >
+        <p>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
+        </p>
+        <p>
+            <label for="dtaNasc">Data de nascimento</label>
+            <input type="date" id="dtaNasc" name="dtaNasc">
+        </p>
+        <p>
+            <label for="tel">Telefone</label>
+            <input type="tel" id="tel" name="tel">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </p>
+        <p>
+            <label for="username">Nome de usuário</label>
+            <input type="text" id="username" name="username">
+        </p>
+        <p>
+            <label for="senha">Senha</label>
+            <input type="text" id="senha" name="senha">
+        </p>
+        <!--
+        <p>
+            <label for="senha">Confirmar Senha</label>
+            <input type="text" id="confSenha" name="confSenha">
+        </p>
+        -->
+        <button type="submit" name="cadastrar">Cadastrar</button>
+    </form>
+
+    <script src="js/forms.js"></script>
+</body>
+</html>
