@@ -16,10 +16,10 @@ define('MAILER_PORT',587);
 
 
 //site de host do token
-define('HOST_TOKEN_NGROK', '.9f95-45-161-131-249.ngrok-free.app');
+define('HOST_TOKEN_NGROK', '.e8d3-2804-518c-26-4101-00-7c99.ngrok-free.app');
 define('HOST_TOKEN_HOSTINGER','.libreleia.com.br');
 define('HOST_TOKEN_LOCALHOST', '');
 
 //header
-define('HEADER_ALLOW_NGROK', 'https://9f95-45-161-131-249.ngrok-free.app');
+define('HEADER_ALLOW_NGROK', 'https://e8d3-2804-518c-26-4101-00-7c99.ngrok-free.app');
 define('HEADER_ALLOW_HOSTINGER', 'https://libreleia.com.br');

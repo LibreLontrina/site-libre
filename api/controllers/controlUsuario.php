@@ -57,7 +57,7 @@ class controlUsuario
         //Criar código de verificação
         $codigoVerif =  codigosVerif::criarCodVerif();
         $modelCodVerifCad = new modelCodigosVerif();
-        $codVerif = $modelCodVerifCad->gerarCodigo($codigoVerif, $resp['id']);
+        $codVerif = $modelCodVerifCad->gerarCodigo($codigoVerif, $resp['id'], 'verif_email');
         if($codVerif['status'] === false)
         {
             Response::criarResponse($codVerif['status'], $codVerif['mensagem']);

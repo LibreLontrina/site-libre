@@ -187,7 +187,7 @@ class controlComum
                 
             break;
         }
-        Response::criarResponse(true, "Email enviado");
+        Response::criarResponse(true, "Email enviado", $token ?? null);
 
     }
 
