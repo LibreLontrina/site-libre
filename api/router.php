@@ -7,6 +7,7 @@ header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type, Authorization, dispositivo");
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200); // Envia status OK
     exit(); // Encerra o script antes de qualquer outra lógica
@@ -15,10 +16,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 $uri = $_SERVER['REQUEST_URI'];
 $uribase = '/TESTE5/api/';
 
+if(strpos($uri, "?"))
+{
+    $varfs = parse_url($uri);
+    
+    $queryParams = [];
+    if (isset($varfs['query'])) 
+    {
+        parse_str($varfs['query'], $queryParams);
+        $_GET = ['parametros' => $queryParams] ;
+    }
+    $uri = substr($uri, 0, strpos($uri, "?")) ;
+}
+
 if(strpos($uri, $uribase) === 0)
 {
     $uri = substr($uri,strlen($uribase));
 }
+
+
+
 
 $endpoint = explode('/', trim($uri, '/'));
 
@@ -52,7 +69,7 @@ $rotas = [
     ],
     'livro' => [
         'inserir',
-        'pesquisar',
+        'buscarDados' => ['controlLivro', 'verLivro'],
         'atualizar',
         'deletar'
     ],

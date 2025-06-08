@@ -1,0 +1,84 @@
+main
+{
+    padding: 20px;
+    box-sizing: border-box;
+}
+header {
+    background-color: coral;
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+
+}
+form{
+    display: flex;
+    flex-direction: row;
+
+}
+    header input{
+        width: 600px;
+        height: 24px;
+
+        font-size: 20px;
+    }
+    header button{
+        width: 30px;
+        height: 30px;
+
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+
+
+
+    }
+
+.card{
+    
+    background-color: tomato;
+    border: 1px solid black;
+
+    width: 225px;
+    height: 350px;
+
+    flex: 1 0 auto;
+    
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: end;     
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+    .card img {
+            max-width: 220px;
+            max-height: 300px;
+    }
+.info_card{
+    position: absolute;
+    z-index: 2; 
+    
+    font-size: large;
+    font-weight: 500;
+
+}
+    .autor{
+        bottom: 0%;
+    }
+    .titulo{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        bottom: 5%;
+    }
+
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    overflow-x: auto;
+    flex-wrap: nowrap;   
+
+
+}

@@ -42,7 +42,7 @@ class modelUsuario
             apelido_usuario, username_usuario, telefone_usuario, data_nasc_usuario)
             VALUES (:email , :senha , :nome , :username , :tel , :dtaNasc)', $conta);
 
-            if($bd > 0)
+            if(!empty($bd) && count($bd) > 0) //talvez dê problema???
             {
                 //query para pegar o id
                 $idUsuario = $conexao->exe_query('SELECT id_usuario 
@@ -335,7 +335,7 @@ class modelUsuario
                                         SET senha_usuario = :senha 
                                         WHERE id_usuario = :id",
                                         $params);
-            if($bd > 0)
+            if(!empty($bd) && count($bd) > 0) //talvez dê problema???
             {
                 $status = true;
                 $mensagem = "Sucesso ao atualizar senha";
