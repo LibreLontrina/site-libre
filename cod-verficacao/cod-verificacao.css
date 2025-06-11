@@ -1,0 +1,150 @@
+ /* Estilos Gerais */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #DEC3FF;
+     /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Container Principal */
+    .container {
+      background: #fff;
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 16px;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(30deg);
+      z-index: 0;
+    }
+
+    /* Cabeçalho */
+    .header {
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header h2 {
+      font-size: 26px;
+      margin-bottom: 12px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .header p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Entradas de Código */
+    .codigo {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 30px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .codigo input {
+      width: 50px;
+      height: 60px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      background-color: #f8f9fa;
+      transition: all 0.3s ease;
+      outline: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .codigo input:focus {
+      border-color: #d067e0;
+      background-color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(244, 248, 255, 0.2);
+    }
+
+    /* Reenvio */
+    .reenviar {
+      font-size: 14px;
+      margin: 20px 0 30px;
+      color: #666;
+      position: relative;
+      z-index: 1;
+    }
+
+    .reenviar a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .reenviar a:hover {
+      color: #1a5dc7;
+      text-decoration: underline;
+    }
+
+    /* Botão */
+    button {
+      padding: 14px 30px;
+      background:#9454AC;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(47, 47, 47, 0.4);
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(119, 119, 119, 0.6);
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    /* Animações */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      animation: fadeIn 0.6s ease-out;
+    }

@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #e6e6f0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.search-bar {
+  width: 40%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 25%;
+  padding: 20px;
+  background: #fff;
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.menu-options li {
+  margin-bottom: 10px;
+}
+
+.activity,
+.consumo {
+  margin-top: 20px;
+}
+
+.bar {
+  width: 80%;
+  height: 8px;
+  background: #ddd;
+  margin-bottom: 6px;
+}
+
+.profile-content {
+  width: 75%;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.genres button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.description {
+  width: 40%;
+}
+
+.friends ul {
+  list-style: none;
+  padding: 0;
+}
+
+.friend-photo {
+  width: 24px;
+  height: 24px;
+  background: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.carousel {
+  margin-top: 40px;
+}
+
+.carousel h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.carousel-row div {
+  width: 120px;
+  height: 180px;
+  background: #ccc;
+}

@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #9454ac, #7c3d96);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 25px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px rgba(29, 28, 28, 0.8);
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form > h1 {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+label {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 500;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+  margin-top: 6px;
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: #f0f0f0;
+  width: 100%;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: 2px solid #9454ac;
+  background-color: #fff;
+}
+
+.linha {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.linha > div {
+  flex: 1;
+}
+
+.requisitos {
+  font-size: 11px;
+  margin-top: 8px;
+  text-align: center;
+  color: #666;
+  line-height: 1.4;
+}
+
+.termos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.termos input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #9454ac;
+  cursor: pointer;
+}
+
+.termos label {
+  font-size: 13px;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.termos a {
+  color: #7c3d96;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.termos a:hover {
+  text-decoration: underline;
+}
+
+.irlogin 
+{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.irlogin a 
+{
+  color: #7c3d96;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.irlogin a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px 0;
+  border-radius: 15px;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #9454ac;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0px 5px 15px rgba(158, 139, 182, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #7c3d96;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(158, 139, 182, 0.6);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+  
+  form > h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .linha {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"] {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-height: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  form > h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  
+  .requisitos {
+    font-size: 10px;
+  }
+  
+  .termos label {
+    font-size: 12px;
+  }
+  
+  button {
+    padding: 10px 0;
+    margin-top: 12px;
+  }
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+  animation: slideDown 0.3s ease-out;
+  padding: 5px 10px;
+  background-color: #fff0f0;
+  border-radius: 5px;
+  border-left: 3px solid #ff4d4d;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+    /* Animações */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bgFade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    

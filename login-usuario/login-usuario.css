@@ -1,0 +1,431 @@
+/* Estilos globais */
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #9454ac, #7c3d96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    animation: bgFade 1.5s ease-out;
+    overflow: hidden;
+}
+
+/* O main-wrapper agora centraliza o conteúdo */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* A tela esquerda e seus estilos foram removidos, pois a logo está agora dentro do container */
+/* .tela-esquerda, .tela-esquerda > h1, .img-esquerda estilos removidos ou comentados */
+
+/* Estilos para a tela direita (agora conterá o formulário centralizado) */
+.tela-direita {
+    width: 100vw;
+    /* Ocupa a largura total da tela */
+    height: 100vh;
+    /* Ocupa a altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    animation: fadeIn 1s ease-out;
+    /* Animação para a tela direita */
+}
+
+.container {
+    background-color: #fff;
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease-out;
+    /* Animação de aparecer */
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    /* Adiciona flexbox para alinhar a logo e o formulário */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente os itens internos */
+}
+
+/* O pseudo-elemento ::before do container foi removido para tirar o efeito de brilho interno */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+    z-index: 0;
+}
+
+/* Novo estilo para a logo dentro do container de login */
+.img-login-logo {
+    width: 100px;
+    /* Tamanho da logo */
+    height: auto;
+    margin-bottom: 20px;
+    /* Espaço abaixo da logo */
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
+    animation: float 6s infinite ease-in-out;
+    /* Animação de flutuar para a logo também */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+form>h1 {
+    color: #2b134b;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+    margin-top: 5px;
+    padding: 15px 15px 15px 45px;
+    border-radius: 15px;
+    border: none;
+    background-color: #f8f8f8;
+    width: 100%;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+input:focus {
+    outline: 2px solid #9454ac;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(148, 84, 172, 0.4);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 43px;
+    color: #9454ac;
+    font-size: 18px;
+}
+
+.links-auxiliares {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.links-auxiliares a {
+    text-align: center;
+    font-size: 14px;
+    color: #7c3d96;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.links-auxiliares a:hover {
+    color: #2b134b;
+}
+
+.links-auxiliares a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #7c3d96;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.links-auxiliares a:hover::after {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px 0;
+    border-radius: 15px;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(to right, #9454ac, #7c3d96);
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 5px 15px rgba(158, 139, 182, 0.4);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(158, 139, 182, 0.6);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.social-login {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-login p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: #ddd;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    color: #7c3d96;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    background: #7c3d96;
+    color: white;
+    box-shadow: 0 5px 15px rgba(124, 61, 150, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tela-direita {
+        width: 100vw;
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 25px 20px;
+    }
+
+    .img-login-logo {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 15px;
+    }
+
+    form>h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 14px 14px 14px 42px;
+        font-size: 14px;
+    }
+
+    .input-icon {
+        font-size: 16px;
+        top: 42px;
+    }
+
+    button {
+        padding: 15px 0;
+    }
+
+    .img-login-logo {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-height: 600px) and (min-width: 769px) {
+    .container {
+        padding: 25px;
+        max-width: 400px;
+    }
+
+    .img-login-logo {
+        width: 90px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bgFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 8px;
+    display: none;
+    animation: slideDown 0.3s ease-out;
+    padding: 8px 12px;
+    background-color: #fff0f0;
+    border-radius: 8px;
+    border-left: 3px solid #ff4d4d;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
