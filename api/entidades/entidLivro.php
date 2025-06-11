@@ -2,7 +2,7 @@
 
 class entidLivro
 {
-    private $idGoogle, $titulo, $autor, $editora, $dtaPublic, $descr, $isbn; 
+    private $idGoogle, $titulo, $autor, $editora, $dtaPublic, $descr, $isbn, $CaminLivro; 
 
     public function setDadosGoogle($dados)
     {
@@ -15,6 +15,7 @@ class entidLivro
         $this->setIsbn         ($dados['volumeInfo']['industryIdentifiers']['1']['identifier'] ??
                                       ['volumeInfo']['industryIdentifiers']['0']['identifier'] ?? 
                                       null);
+        $this->setCaminLivro   (null);
     }
 
     private function setIdGoogle($idGoogle)
@@ -47,12 +48,26 @@ class entidLivro
 
     private function setAutor($autor)
     {
-        if(empty($autor))
+        if (empty($autor)) 
         {
+            $this->autor = null;
             return;
         }
 
-        $this->autor = $autor;
+        // Se for string simples
+        if (is_string($autor)) 
+        {
+            $this->autor = $autor;
+            return;
+        }
+
+        // Se for array
+        if (is_array($autor)) 
+        {
+            $this->autor = implode(', ', $autor);
+            return;
+        }
+
     }
     public function getAutor()
     {
@@ -94,14 +109,14 @@ class entidLivro
             return;
         }
 
-        $this->descr = $descr;
+        $this->descr = strip_tags($descr);
     }
     public function getDescr()
     {
         return $this->descr;
     }
 
-        private function setIsbn($isbn)
+    private function setIsbn($isbn)
     {
         if(empty($isbn))
         {
@@ -113,5 +128,20 @@ class entidLivro
     public function getIsbn()
     {
         return $this->isbn;
+    }
+
+
+    private function setCaminLivro($caminho)
+    {
+        if(empty($caminho))
+        {
+            return;
+        }
+
+        $this->CaminLivro = $caminho;
+    }
+    public function getCaminLivro()
+    {
+        return $this->CaminLivro;
     }
 }

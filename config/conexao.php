@@ -38,11 +38,11 @@ class conexao
                     }
 
                     $pdo = null; //fecha o banco 
-                    return $resultados;
+                    return $resultados; //CUIDADO!! ISSO É UMA ARRAY
                 }
                 catch(PDOException $e)
                 {
-                    die("Erro SQL: " . $e->getMessage());
+                    throw new PDOException($e->getMessage());
                 }
             }
             else
@@ -63,12 +63,12 @@ class conexao
                     $pdo-> commit();
 
                     $pdo = null; //fecha o banco
-                    return $gestor->rowCount();
+                    return $gestor->rowCount(); //CUIDADO!! ISSO É UM INT
                 }
                 catch(PDOException $e)
                 {
                     $pdo->rollback();
-                    return $e->getMessage();
+                    throw new PDOException($e->getMessage());
                 }
 
             }
@@ -77,9 +77,8 @@ class conexao
         }
         catch (PDOException $e)
         {
-            $e = $e->getMessage();
             $pdo = null;
-            die('Erro: ' . $e);
+            throw new PDOException($e->getMessage());
         } 
     }
 }

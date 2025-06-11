@@ -38,15 +38,19 @@ class controlLivro
         $entidLivro = new entidLivro();
         $entidLivro->setDadosGoogle($dadosGoogle['dados']);
 
-        //TESTE GRANDE
+        $modelLivro = new modelLivro();
+        $resp = $modelLivro->inserirLivro($entidLivro);
+        Response::criarResponse($resp['status'], $resp['mensagem']);
+
         $sla = [
             'setIdGoogle' =>    $entidLivro->getIdGoogle(),
             'setTitulo' =>      $entidLivro->getTitulo(),
-            'setAutor' =>       $entidLivro->getAutor(),      //transformar array em String
+            'setAutor' =>       $entidLivro->getAutor(),//$autores,
             'setEditora' =>     $entidLivro->getEditora(),
             'setDtaPublic' =>   $entidLivro->getDtaPublic(),
-            'setDescr' =>       $entidLivro->getDescr(),      //Preciso limitar a descrição aos 300 caracteres
-            'setIsbn' =>        $entidLivro->getIsbn()
+            'setDescr' =>       $entidLivro->getDescr(),      
+            'setIsbn' =>        $entidLivro->getIsbn(),
+            'setCaminho' =>     $entidLivro->getCaminLivro()
         ];
 
         var_dump($sla);

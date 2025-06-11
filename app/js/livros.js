@@ -90,7 +90,7 @@ async function criarCards(dados)
         console.log("você cliclou no card: " + id);
         //ou
         //console.log("você cliclou no card: " + idBook);
-        window.location.href = `livro.html?livro=${id}`;
+        window.location.href = `livro.html?l=${id}`;
     });
 
     //CRIAÇÃO DO TITULO
