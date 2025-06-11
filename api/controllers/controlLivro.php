@@ -15,20 +15,20 @@ class controlLivro
     public function verLivro()
     {
         $parametros = $_GET['parametros'];
-        $idLivro = $parametros['l'];
+        $idLivroGoogle = $parametros['l'];
 
         $modelLivro = new modelLivro();
-        $verifLivro = $modelLivro->verifLivro($idLivro);
+        $verifLivro = $modelLivro->verifLivro($idLivroGoogle);
 
         //Response::criarResponse($resp['status'], $resp['mensagem']);
         if($verifLivro['status'] === true)
         {
-            $dadosBD = $modelLivro->buscarDadosLivro($idLivro);
+            $dadosBD = $modelLivro->buscarDadosLivro($idLivroGoogle);
             Response::criarResponse($dadosBD['status'], $dadosBD['mensagem'], $dadosBD['dados'] ?? null);
         }
 
         $apiGoogle = new googleBooksApi();
-        $dadosGoogle = $apiGoogle->buscarPorId($idLivro);
+        $dadosGoogle = $apiGoogle->buscarPorId($idLivroGoogle);
 
         if($dadosGoogle['status'] === false)
         {
@@ -40,8 +40,25 @@ class controlLivro
 
         $modelLivro = new modelLivro();
         $resp = $modelLivro->inserirLivro($entidLivro);
-        Response::criarResponse($resp['status'], $resp['mensagem']);
+        if($resp['status'] === false)
+        {
+            Response::criarResponse($resp['status'], $resp['mensagem']);
+        }
 
+        $verifLivro = $modelLivro->verifLivro($idLivroGoogle);
+        if($verifLivro['status'] === true)
+        {
+            $dadosBD = $modelLivro->buscarDadosLivro($idLivroGoogle);
+            Response::criarResponse($dadosBD['status'], $dadosBD['mensagem'], $dadosBD['dados'] ?? null);
+        }
+
+
+
+
+
+
+        /*
+        //TESTES
         $sla = [
             'setIdGoogle' =>    $entidLivro->getIdGoogle(),
             'setTitulo' =>      $entidLivro->getTitulo(),
@@ -50,17 +67,15 @@ class controlLivro
             'setDtaPublic' =>   $entidLivro->getDtaPublic(),
             'setDescr' =>       $entidLivro->getDescr(),      
             'setIsbn' =>        $entidLivro->getIsbn(),
-            'setCaminho' =>     $entidLivro->getCaminLivro()
+            'setCaminho' =>     $entidLivro->getCaminLivro(),
+            'setCapa' =>        $entidLivro->getCapa()
         ];
 
         var_dump($sla);
         exit;
-
+*/
 
         //verificar se já existe no banco
-
-
-
 
 
 

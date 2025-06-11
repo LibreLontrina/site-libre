@@ -2,7 +2,7 @@
 
 class entidLivro
 {
-    private $idGoogle, $titulo, $autor, $editora, $dtaPublic, $descr, $isbn, $CaminLivro; 
+    private $idGoogle, $titulo, $autor, $editora, $dtaPublic, $descr, $isbn, $CaminLivro, $capa; 
 
     public function setDadosGoogle($dados)
     {
@@ -16,6 +16,12 @@ class entidLivro
                                       ['volumeInfo']['industryIdentifiers']['0']['identifier'] ?? 
                                       null);
         $this->setCaminLivro   (null);
+        $this->setCapa         ($dados['volumeInfo']['imageLinks']['extraLarge'] ??
+                                $dados['volumeInfo']['imageLinks']['large'] ??
+                                $dados['volumeInfo']['imageLinks']['medium'] ??
+                                $dados['volumeInfo']['imageLinks']['thumbnail'] ??
+                                $dados['volumeInfo']['imageLinks']['smallThumbnail'] ??
+                                null);
     }
 
     private function setIdGoogle($idGoogle)
@@ -143,5 +149,19 @@ class entidLivro
     public function getCaminLivro()
     {
         return $this->CaminLivro;
+    }
+
+    private function setCapa($capa)
+    {
+        if(empty($capa))
+        {
+            return;
+        }
+
+        $this->capa = $capa;
+    }
+    public function getCapa()
+    {
+        return $this->capa;
     }
 }

@@ -20,6 +20,9 @@ async function carregarLivro()
     });
     */
     const resposta = await fetches.json();
+    colocarTela(resposta['dados']);
+
+
     console.log(resposta);
 
 }
@@ -33,12 +36,20 @@ async function colocarTela(dados)
     const Desc = document.getElementById("descricao");
     const Titulo = document.getElementById("titulo-livro");
     
-    Titulo.innerHTML = dados.volumeInfo.title;
-    Desc.innerHTML = dados.volumeInfo.description;
-    DtaPuclic.innerHTML = dados.volumeInfo.publishedDate;
-    Editora.innerHTML = dados.volumeInfo.publisher;
-    Autor.innerHTML = dados.volumeInfo.authors;
-    imgCapa.setAttribute("src", dados.volumeInfo.imageLinks.large);
+
+    Titulo.innerHTML = dados.nome_livro;
+    Desc.innerHTML = dados.descricao_livro;
+    DtaPuclic.innerHTML = dados.data_livro;
+    Editora.innerHTML = dados.editora_livro;
+    Autor.innerHTML = dados.autor_livro;
+    imgCapa.setAttribute("src", dados.capa_livro);
+
+    // Titulo.innerHTML = dados.volumeInfo.title;
+    // Desc.innerHTML = dados.volumeInfo.description;
+    // DtaPuclic.innerHTML = dados.volumeInfo.publishedDate;
+    // Editora.innerHTML = dados.volumeInfo.publisher;
+    // Autor.innerHTML = dados.volumeInfo.authors;
+    // imgCapa.setAttribute("src", dados.volumeInfo.imageLinks.large);
 
 
 

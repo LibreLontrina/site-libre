@@ -33,7 +33,7 @@ class modelLivro
         catch (Exception $e)
         {
             $status = false;
-            $mensagem = "Erro ao verificar Livro";
+            $mensagem = "Erro ao verificar Livro: $e";
         }
         return [
             'status' => $status,
@@ -53,15 +53,16 @@ class modelLivro
                 'DtaPublic' =>   $entidLivro->getDtaPublic(),
                 'Descr' =>       $entidLivro->getDescr(),      
                 'Isbn' =>        $entidLivro->getIsbn(),
-                'CaminhoLivro' =>$entidLivro->getCaminLivro()
+                'CaminhoLivro' =>$entidLivro->getCaminLivro(),
+                'Capa' =>        $entidLivro->getCapa()
             ];
 
             // var_dump($params);
             // exit;
 
             $conexao = new conexao();
-            $bd = $conexao->exe_query("INSERT INTO livros (nome_livro, autor_livro, data_livro, descricao_livro, caminho_livro, ISBN_livro, id_google_book, editora_livro) 
-                                              VALUES (:Titulo, :Autor, :DtaPublic, :Descr, :CaminhoLivro, :Isbn, :IdGoogle, :Editora)",
+            $bd = $conexao->exe_query("INSERT INTO livros (nome_livro, autor_livro, data_livro, descricao_livro, caminho_livro, ISBN_livro, id_google_book, editora_livro, capa_livro) 
+                                              VALUES (:Titulo, :Autor, :DtaPublic, :Descr, :CaminhoLivro, :Isbn, :IdGoogle, :Editora, :Capa)",
                                               $params);
 
             if(is_int($bd) && $bd > 0)
@@ -89,8 +90,43 @@ class modelLivro
         ];
     }
 
-    public function buscarDadosLivro()
+    public function buscarDadosLivro($idLivroGoogle)
     {
+        try
+        {
+            $param = [
+                'IdLivroGoogle' => $idLivroGoogle
+            ];
+
+            $conexao = new conexao();
+            $bd = $conexao->exe_query("SELECT id_livro, nome_livro, autor_livro, data_livro, descricao_livro, editora_livro, capa_livro 
+                                              FROM livros 
+                                              WHERE id_google_book = :IdLivroGoogle",
+                                              $param);
+
+            
+            if(!empty($bd) && count($bd) > 0)
+            {
+                $status = true;
+                $mensagem = "Dados do livro: $idLivroGoogle , pegos com sucesso";
+                $dados = $bd[0];
+            }
+            else
+            {
+                $status = false;
+                $mensagem = "Falha ao pegar dados do livro: $idLivroGoogle";
+            }
+        }
+        catch(Exception $e)
+        {
+            $status = false;
+            $mensagem = "Erro ao buscar dados do Livro: $e";
+        }
+        return [
+            'status' => $status,
+            'mensagem' => $mensagem,
+            'dados' => $dados ?? null
+        ];
 
     }
 

@@ -64,6 +64,7 @@ class modelCodigosVerif
             {
                 $status = false;
                 $mensagem = "O codigo não existe";
+                return;
             }
             
             $status = true;
