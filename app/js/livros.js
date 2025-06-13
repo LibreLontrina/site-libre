@@ -23,18 +23,23 @@ pesquisar.addEventListener("submit", async (e) => {
 e.preventDefault();
 
     const input = barra.value ?? null;
-    window.location.href = `?procura=${input}`;
+    window.location.href = `?p=${input}`;
     //buscar(input);
 });
 
 async function buscar(input)
 {
-
+   
     if(input == null)
     {
         input = "Depois de você";
     }
+    /*
     const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${input}`, {
+        method : 'GET'
+
+    });*/
+    const response = await fetch(`/TESTE5/api/livro/carroceuLivros?p=${input}`, {
         method : 'GET'
 
     });
@@ -42,7 +47,7 @@ async function buscar(input)
     const resp = await response.json();
     console.log(resp);
     //const infoLivro = resp.volumeInfo;
-        conteiner.innerHTML = "";
+    conteiner.innerHTML = "";
     for(i = 0; i < resp.items.length; i++)
     {
         livro = resp.items[i];
@@ -87,9 +92,6 @@ async function criarCards(dados)
 
     card.addEventListener("click", () => {
         const id = card.getAttribute("data-id-book-google"); 
-        console.log("você cliclou no card: " + id);
-        //ou
-        //console.log("você cliclou no card: " + idBook);
         window.location.href = `livro.html?l=${id}`;
     });
 

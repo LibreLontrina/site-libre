@@ -14,15 +14,9 @@ async function carregarLivro()
         method: 'GET',
         headers: {"Dispositivo" : "web"}
     });
-    /*
-    const fetchBook = await fetch(`https://www.googleapis.com/books/v1/volumes/${id_livro}`, {
-        method: 'GET'
-    });
-    */
     const resposta = await fetches.json();
+    
     colocarTela(resposta['dados']);
-
-
     console.log(resposta);
 
 }
@@ -43,14 +37,25 @@ async function colocarTela(dados)
     Editora.innerHTML = dados.editora_livro;
     Autor.innerHTML = dados.autor_livro;
     imgCapa.setAttribute("src", dados.capa_livro);
+    
 
-    // Titulo.innerHTML = dados.volumeInfo.title;
-    // Desc.innerHTML = dados.volumeInfo.description;
-    // DtaPuclic.innerHTML = dados.volumeInfo.publishedDate;
-    // Editora.innerHTML = dados.volumeInfo.publisher;
-    // Autor.innerHTML = dados.volumeInfo.authors;
-    // imgCapa.setAttribute("src", dados.volumeInfo.imageLinks.large);
+    Object.values(dados.generos_livro).forEach(genero => 
+    {
+        colocarGeneros(genero); 
+    });
+    
 
+
+}
+
+async function colocarGeneros(txtGenero) 
+{
+    const divGeneros = document.getElementById("generos_lista");
+
+    const genero = document.createElement("button");
+    genero.classList.add("botao-generos");
+    genero.appendChild(document.createTextNode(txtGenero));
+    divGeneros.appendChild(genero);
 
 
 }

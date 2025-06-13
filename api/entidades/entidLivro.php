@@ -2,7 +2,20 @@
 
 class entidLivro
 {
-    private $idGoogle, $titulo, $autor, $editora, $dtaPublic, $descr, $isbn, $CaminLivro, $capa; 
+    private $idGoogle, $titulo, $autor, $editora, $dtaPublic, $descr, $isbn, $CaminLivro, $capa, $genero;
+    private const traducao = [
+        'History' => 'História',
+        'Political Science' => 'Ciência Política',
+        'Social Science' => 'Ciências Sociais',
+        'Philosophy' => 'Filosofia',
+        'Fiction' => 'Ficção',
+        'Biography & Autobiography' => 'Biografia',
+        'Education' => 'Educação',
+        'Europe' => 'Europa',
+        'General' => 'Geral',
+        'Fantasy' => 'Fantasia'
+
+    ];
 
     public function setDadosGoogle($dados)
     {
@@ -22,6 +35,7 @@ class entidLivro
                                 $dados['volumeInfo']['imageLinks']['thumbnail'] ??
                                 $dados['volumeInfo']['imageLinks']['smallThumbnail'] ??
                                 null);
+        $this->setGenero        ($dados['volumeInfo']['categories'] ?? null);
     }
 
     private function setIdGoogle($idGoogle)
@@ -164,4 +178,64 @@ class entidLivro
     {
         return $this->capa;
     }
+
+    private function setGenero($genero)
+    {
+        if(empty($genero))
+        {
+            return;
+        }
+
+        $categ = $this->CategPrincipais($genero);
+        if(!is_array($categ))
+        {
+            return;
+        }
+
+        $this->genero = $categ;
+    }
+    public function getGenero()
+    {
+        return $this->genero;
+    }
+
+    private function CategPrincipais(array $categorias, $maxCategorias = 3): array 
+    {
+        $contagem = [];
+
+        foreach ($categorias as $linha) 
+        {
+            $partes = explode(' / ', $linha);
+            foreach (array_slice($partes, 0, 3) as $parte) 
+            {
+                $contagem[$parte] = ($contagem[$parte] ?? 0) + 1;
+            }
+        }
+
+        // Ordena por frequência
+        arsort($contagem);
+
+        // Traduz e filtra duplicatas
+        $resultado = [
+
+        ];
+
+        foreach (array_keys($contagem) as $categoriaEn) 
+        {
+            $traducao = self::traducao[$categoriaEn] ?? ucfirst(strtolower($categoriaEn));
+
+            if (!in_array($traducao, $resultado)) 
+            {
+                $resultado[] = $traducao;
+            }
+            if (count($resultado) >= $maxCategorias) 
+            {
+                break;
+            }
+        }
+
+         return $resultado;
+
+    }
+
 }

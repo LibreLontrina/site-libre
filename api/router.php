@@ -69,7 +69,8 @@ $rotas = [
     ],
     'livro' => [
         'inserir',
-        'buscarDados' => ['controlLivro', 'verLivro'],
+        'buscarDados' => ['controlLivro', 'buscarLivro'],
+        'carroceuLivros' => ['controlLivro', 'carroceuLivros'],
         'atualizar',
         'deletar'
     ],

@@ -31,7 +31,7 @@ forms.forEach(form => {
                 }
             }
 
-            console.log(resultado);
+            console.log(resultado.dados);
             
         } 
         catch (error) 
